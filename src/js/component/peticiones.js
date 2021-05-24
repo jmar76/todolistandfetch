@@ -4,7 +4,7 @@ import "../../styles/peticiones.scss";
 function Form() {
 	const [oneTask, setOneTask] = useState("");
 	const [tasks, setTasks] = useState([]);
-	console.log(tasks);
+	console.log("de tareas", tasks);
 	useEffect(() => {
 		alert("Introduce en la lista las tareas a realizar, gracias.");
 	}, []);
@@ -18,22 +18,19 @@ function Form() {
 		setOneTask("");
 	};
 	const hacerFetch = () => {
-		fetch(
-			"http://assets.breatheco.de/apis/fake/todos/user/usuariocualquiera",
-			{
-				method: "POST",
-				body: JSON.stringify(tasks),
-				headers: {
-					"Content-Type": "application/json"
-				}
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/jose", {
+			method: "PUT",
+			body: JSON.stringify(tasks),
+			headers: {
+				"Content-Type": "application/json"
 			}
-		)
-			.then(resp => {
-				console.log(resp.ok); // Será true (verdad) si la respuesta es exitosa.
-				console.log(resp.status); // el código de estado = 200 o código = 400 etc.
-				console.log(resp.text()); // Intentará devolver el resultado exacto como cadena (string)
+		})
+			.then(response => {
+				console.log(response.ok); // Será true (verdad) si la responseuesta es exitosa.
+				console.log(response.status); // el código de estado = 200 o código = 400 etc.
+				console.log(response.text()); // Intentará devolver el resultado exacto como cadena (string)
 				console.log("perfect");
-				return resp.json(); // (regresa una promesa) will try to parse the result as json as return a promise that you can .then for results
+				return response.json(); // (regresa una promesa) will try to parse the result as json as return a promise that you can .then for results
 			})
 			.then(data => {
 				//Aquí es donde debe comenzar tu código después de que finalice la búsqueda
