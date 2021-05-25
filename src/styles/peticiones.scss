@@ -1,14 +1,14 @@
 #contador {
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-    font-size: 66px;
+    font-size: 36px;
     padding-top: 10px;
     text-align: center;
 }
 #usuario {
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-    font-size: 27px;
+    font-size: 17px;
     padding-top: 19px;
 }
 #tarea {
@@ -26,8 +26,6 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     background-color: black;
 }
 #imagen {
-height: 100%;
-width: 110%;
   margin: 0px;
 }
 .botonFecth{
@@ -35,4 +33,13 @@ width: 110%;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     background-color: rgb(241, 25, 25);
+}
+.centrado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.back{
+    background-color: rgba(0, 0, 0, 0.171);
+    border-radius: 13px;
 }
