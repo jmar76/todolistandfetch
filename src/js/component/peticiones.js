@@ -9,14 +9,10 @@ function Form() {
 	const [avisoput, setavisoPut] = useState("");
 	const [avisoget, setavisoGet] = useState("");
 	const [avisodelete, setavisoDelete] = useState("");
-	console.log(tasks);
+
 	const comenzar = () => {
 		location.reload();
 	};
-
-	// useEffect(() => {
-
-	// }, [comenzar()]);
 
 	const handleClick = () => {
 		let newArray = [...tasks, { label: oneTask, done: false }];
@@ -193,6 +189,9 @@ function Form() {
 								width="300px"
 								className="border"
 							/>
+							<a href="https://insomnia.rest/">
+								https://insomnia.rest/
+							</a>
 						</div>
 					</div>
 				) : (
