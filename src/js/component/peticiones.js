@@ -11,7 +11,7 @@ function Form() {
 	const [avisodelete, setavisoDelete] = useState("");
 
 	const comenzar = () => {
-		window.reload();
+		location.reload();
 	};
 
 	// useEffect(() => {
