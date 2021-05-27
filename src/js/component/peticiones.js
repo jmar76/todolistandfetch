@@ -152,8 +152,8 @@ function Form() {
 						datos real, usando RESTful y API pública.{" "}
 						<strong>
 							Paralelamente hay que ir comprobando cada paso con
-							Insomnia, para verificar las actualizaciones de la
-							API.
+							<span className="text-primary"> Insomnia</span>,
+							para verificar las actualizaciones de la API.
 						</strong>
 					</p>
 				</div>
@@ -189,7 +189,10 @@ function Form() {
 								width="300px"
 								className="border"
 							/>
-							<a href="https://insomnia.rest/">
+							<a
+								href="https://insomnia.rest/"
+								rel="noreferrer"
+								target="_blank">
 								https://insomnia.rest/
 							</a>
 						</div>
@@ -316,9 +319,8 @@ function Form() {
 								Primer paso:{" "}
 							</strong>{" "}
 							pulsa Method/POST, este método es solo para la
-							creación, pasará un arreglo vacío en el cuerpo a la
-							API porque aún no hay tareas.{" "}
-							<strong>Comprobar en Insomnia.</strong>
+							creación del usuario, pasará un arreglo vacío a la
+							API. <strong>Comprobar en Insomnia.</strong>
 						</p>
 					) : (
 						<p>
