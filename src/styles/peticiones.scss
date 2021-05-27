@@ -52,10 +52,37 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     flex-direction: column;
 }
 .contenedorBoton5{
-        width: 300px;
+    width: 300px;
     height: 50px;
     margin-bottom: 100px;
 }
-.refresh{
-    margin-left: 80px;
+.content{
+    width: 305px;
+    height: 185px;
+    margin: auto;
+    margin-top: 50px;
+}
+.border{
+    border-radius: 13px;
+}
+.contenedorReload{
+    width: 300px;
+    height: 140px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedorImagenRefresh{
+    width: 85px;
+    height: 85px;
+    align-items: center;
+    margin: auto;
+}
+.contenedorBotonRefresh{
+    width: 190px;
+     height: 45px;
+     margin: auto;
+  
+
 }

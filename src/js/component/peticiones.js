@@ -9,7 +9,7 @@ function Form() {
 	const [avisoput, setavisoPut] = useState("");
 	const [avisoget, setavisoGet] = useState("");
 	const [avisodelete, setavisoDelete] = useState("");
-
+	console.log(tasks);
 	const comenzar = () => {
 		location.reload();
 	};
@@ -156,9 +156,8 @@ function Form() {
 						datos real, usando RESTful y API pública.{" "}
 						<strong>
 							Paralelamente hay que ir comprobando cada paso con
-							Postman o con Insomnia, se recomienda
-							encarecidamente ir probando la API para comprender
-							cada paso.
+							Insomnia, para verificar las actualizaciones de la
+							API.
 						</strong>
 					</p>
 				</div>
@@ -184,21 +183,43 @@ function Form() {
 						/>
 					</div>
 				</div>
-				<div className="col-md-4 back mt-5 ">
-					<img
-						id="imagen"
-						src="http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bdfc.png"
-						height="200px"
-						width="220px"
-						className="mt-3 pl-4 ml-5"
-					/>
-					<button
-						// id="botonFecth"
-						className="btn refresh btn-warning"
-						onClick={() => comenzar()}>
-						<strong className="pl-5 pr-5">Refresh!</strong>
-					</button>
-				</div>
+				{!avisodelete ? (
+					<div className="col-md-4 back mt-5 ">
+						<div className="content">
+							<img
+								id="imagen"
+								src="https://spin.atomicobject.com/wp-content/uploads/insomnia.jpg"
+								height="180px"
+								width="300px"
+								className="border"
+							/>
+						</div>
+					</div>
+				) : (
+					<div className="col-md-4 back mt-5 ">
+						<div className="contenedorReload">
+							<div className="contenedorImagenRefresh">
+								<img
+									id="imagen"
+									src="http://assets.stickpng.com/images/585e4831cb11b227491c338e.png"
+									height="80px"
+									width="80px"
+									className="centrado"
+								/>
+							</div>
+							<div className="contenedorBotonRefresh">
+								<button
+									// id="botonFecth"
+									className="btn refresh btn-warning"
+									onClick={() => comenzar()}>
+									<strong className="pl-5 pr-5">
+										Refresh!
+									</strong>
+								</button>
+							</div>
+						</div>
+					</div>
+				)}
 			</div>
 
 			<div className="row">
